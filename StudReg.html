@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="css/StudReg.css">
+
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <img src="img/Person.jpg" alt="" class="header__img">
+
+                <a href="#" class="header__logo"></a>
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon' ></i>
+                        <span class="nav__logo-name">Dashboard</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Enroll</h3>
+    
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-user nav__icon' ></i>
+                                    <span class="nav__name">Register</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Student</a>
+                                        <a href="#" class="nav__dropdown-item">Faculty</a>
+                                        <a href="#" class="nav__dropdown-item">Warden</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-message-rounded nav__icon' ></i>
+                                <span class="nav__name">Messages</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Personal Details</h3>
+    
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-bell nav__icon' ></i>
+                                    <span class="nav__name">Update</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Student</a>
+                                        <a href="#" class="nav__dropdown-item">Faculty</a>
+                                        <a href="#" class="nav__dropdown-item">Warden</a>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Explore</span>
+                            </a>
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bookmark nav__icon' ></i>
+                                <span class="nav__name">Saved</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== REGISTRATION ==========-->
+        <main>
+
+            <div class="container">
+                <div class="title">Registration</div>
+                    <div class="content">
+                        <form action="#">
+                            <div class="user-details">
+
+                                <div class="input-box">
+                                    <span class="details">Full Name</span>
+                                    <input type="text" placeholder="Enter Full Name" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Username</span>
+                                    <input type="text" placeholder="Enter Username" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Email</span>
+                                    <input type="text" placeholder="Enter Email ID" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Phone Number</span>
+                                    <input type="text" placeholder="Enter number" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Password</span>
+                                    <input type="text" placeholder="Enter Password" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Confirm Password</span>
+                                    <input type="text" placeholder="Confirm Password" required>
+                                </div>
+                            </div>
+
+                            <div class="gender-details">
+                                <input type="radio" name="gender" id="dot-1">
+                                <input type="radio" name="gender" id="dot-2">
+                                <input type="radio" name="gender" id="dot-3">
+                                <span class="gender-title">Gender</span>
+                                <div class="category">
+                                    <label for="dot-1">
+                                        <span class="dot one"></span>
+                                        <span class="gender">Male</span>
+                                     </label>
+                                    <label for="dot-2">
+                                        <span class="dot two"></span>
+                                        <span class="gender">Female</span>
+                                    </label>
+                                    <label for="dot-3">
+                                        <span class="dot three"></span>
+                                        <span class="gender">Other</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Register">
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </main>
+        <!--========== DASHBOARD JS ==========-->
+        <script src="js/Dashboard.js"></script>
+    </body>
+</html>
