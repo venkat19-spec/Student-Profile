@@ -264,7 +264,7 @@ img {
 
 /* ==========REGISTRATION FORM========*/
 main{
-  height: 90vh;
+  height: 113vh;
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -380,7 +380,6 @@ form .input-box span.details{
   border-color: #9b59b6;
 }
 
-/*================GENDER SECTION==================*/
 form .gender-details .gender-title{
   font-size: 20px;
   font-weight: 500;
@@ -420,6 +419,7 @@ form .gender-details small{
 form .gender-details.success small{
   visibility: visible;
   color: #2ecc71;
+  
 }
 form .gender-details.failure small{
   visibility: visible;
@@ -434,7 +434,7 @@ form .gender-details.failure small{
  }
 
 form input[type="radio"]{
-   display:none;
+   display: none;
 }
 
 form .button{
@@ -532,11 +532,10 @@ form .button input:hover{
     body{
       overflow: hidden;
     }
-    main {
+    main{
       padding-left: 0px;
     }
     .container{
-        
         max-width: 100%;
         margin-top: 30px;
         position: relative;

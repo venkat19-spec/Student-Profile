@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--========== CSS ==========-->
-        <link rel="stylesheet" href="css/StudReg.css">
+        <link rel="stylesheet" href="css/WardenReg.css">
         
-        <title>Student Registration</title>
+        <title>Warden Registration</title>
     </head>
     <body>
         <!--========== HEADER ==========-->
@@ -60,7 +60,6 @@
                                 </div>
                             </div>
 
-                            
                         </div>
     
                         <div class="nav__items">
@@ -88,7 +87,6 @@
                                 <i class='bx bx-street-view nav__icon' ></i>
                                 <span class="nav__name">View</span>
                             </a>
-                            
                         </div>
                     </div>
                 </div>
@@ -104,11 +102,12 @@
         <main>
             
             <div class="container">
-                <div class="title">Sign Up - Student</div>
+                <div class="title">Sign Up - Warden</div>
                     <div class="content">
                         <form action="#" name="test">
-                            <div class="user-details" id="form">
 
+                            <!--========== TEXTBOX INPUT ==========-->
+                            <div class="user-details" id="form">
                                 <div class="input-box">
                                     <span class="details"><strong>Full Name</strong></span>
                                     <input type="text" placeholder="Enter Full Name" required id="fullname">
@@ -117,7 +116,7 @@
                                     <small>Error Message</small>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details"><strong>Student ID</strong></span>
+                                    <span class="details"><strong>Warden ID</strong></span>
                                     <input type="text" placeholder="Enter Username" required id="username">
                                     <i class="fa fa-check-circle" aria-hidden="true"></i>
                                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -152,8 +151,22 @@
                                     <small>Error Message</small>
                                 </div>
 
+                                <!--========== DROPDOWN SELECTION ==========-->
+                                <div class="input-box">
+                                    <span class="details"><strong>Block</strong></span>
+                                    <select name="block" id= "blk">
+                                        <option value="1">Block 1</option>
+                                        <option value="2">Block 2</option>
+                                        <option value="3">Block 3</option>
+                                        <option value="4">Block 4</option>
+                                        <option value="5">Block 5</option>
+                                        <option value="6">Block 6</option>
+                                    </select>
+                                </div>
                             </div>
+                            <!--========== END ==========-->
 
+                            <!--========== GENDER RADIO BUTTONS ==========-->
                             <div class="gender-details">
                                 <input type="radio" name="gender" id="dot-1" value="Male">
                                 <input type="radio" name="gender" id="dot-2" value="Female">
@@ -173,13 +186,16 @@
                                         <span class="gender">Other</span>
                                     </label>
                                 </div>
-                                <small id="messages">Error Message </small>
-                                
+                                <small id="messages">Error Message</small>
+                            <!--========== END ==========-->    
+
+                            <!--========== SUBMIT BUTTON ==========-->
                             </div>
                             <div class="button" id="btn">
                                 <input type="submit" value="Register" onclick="validation()">
-                                <script src="js/Validation.js"defer></script>
+                                <script src="js/Validation.js" defer></script>
                             </div>
+                            <!--========== END ==========--> 
                         </form>
                     </div>
             </div>

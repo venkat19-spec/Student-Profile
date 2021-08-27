@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--========== CSS ==========-->
-        <link rel="stylesheet" href="css/StudReg.css">
-
-        <title>Dashboard</title>
+        <link rel="stylesheet" href="css/FacReg.css">
+        
+        <title>Faculty Registration</title>
     </head>
     <body>
         <!--========== HEADER ==========-->
@@ -47,23 +47,18 @@
                             <div class="nav__dropdown">
                                 <a href="#" class="nav__link">
                                     <i class='bx bx-user nav__icon' ></i>
-                                    <span class="nav__name">Register</span>
+                                    <span class="nav__name">Sign Up</span>
                                     <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                                 </a>
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="#" class="nav__dropdown-item">Student</a>
-                                        <a href="#" class="nav__dropdown-item">Faculty</a>
-                                        <a href="#" class="nav__dropdown-item">Warden</a>
+                                        <a href="StudReg.html" class="nav__dropdown-item">Student</a>
+                                        <a href="FacReg.html" class="nav__dropdown-item">Faculty</a>
+                                        <a href="WardenReg.html" class="nav__dropdown-item">Warden</a>
                                     </div>
                                 </div>
                             </div>
-
-                            <a href="#" class="nav__link">
-                                <i class='bx bx-message-rounded nav__icon' ></i>
-                                <span class="nav__name">Messages</span>
-                            </a>
                         </div>
     
                         <div class="nav__items">
@@ -71,14 +66,14 @@
     
                             <div class="nav__dropdown">
                                 <a href="#" class="nav__link">
-                                    <i class='bx bx-bell nav__icon' ></i>
+                                    <i class='bx bxs-alarm-add nav__icon' ></i>
                                     <span class="nav__name">Update</span>
                                     <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                                 </a>
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="#" class="nav__dropdown-item">Student</a>
+                                        <a href="StudentPersonalDetails.html" class="nav__dropdown-item">Student</a>
                                         <a href="#" class="nav__dropdown-item">Faculty</a>
                                         <a href="#" class="nav__dropdown-item">Warden</a>
                                         
@@ -88,12 +83,8 @@
                             </div>
 
                             <a href="#" class="nav__link">
-                                <i class='bx bx-compass nav__icon' ></i>
-                                <span class="nav__name">Explore</span>
-                            </a>
-                            <a href="#" class="nav__link">
-                                <i class='bx bx-bookmark nav__icon' ></i>
-                                <span class="nav__name">Saved</span>
+                                <i class='bx bx-street-view nav__icon' ></i>
+                                <span class="nav__name">View</span>
                             </a>
                         </div>
                     </div>
@@ -108,46 +99,96 @@
 
         <!--========== REGISTRATION ==========-->
         <main>
-
+            
             <div class="container">
-                <div class="title">Registration</div>
+                <div class="title">Sign Up - Faculty</div>
                     <div class="content">
-                        <form action="#">
-                            <div class="user-details">
+                        <form action="#" name="test">
+                            <div class="user-details" id="form">
 
+                                <!--========== TEXTBOX INPUT ==========-->
                                 <div class="input-box">
-                                    <span class="details">Full Name</span>
-                                    <input type="text" placeholder="Enter Full Name" required>
+                                    <span class="details"><strong>Full Name</strong></span>
+                                    <input type="text" placeholder="Enter Full Name" required id="fullname">
                                     <i class="fa fa-check-circle" aria-hidden="true"></i>
                                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Username</span>
-                                    <input type="text" placeholder="Enter Username" required>
+                                    <span class="details"><strong>Faculty ID</strong></span>
+                                    <input type="text" placeholder="Enter Username" required id="username">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    <small>Error Message</small>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Email</span>
-                                    <input type="text" placeholder="Enter Email ID" required>
+                                    <span class="details"><strong>Email</strong></span>
+                                    <input type="email" placeholder="Enter Email ID" required id="email">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    <small>Error Message</small>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Phone Number</span>
-                                    <input type="text" placeholder="Enter number" required>
+                                    <span class="details"><strong>Phone Number</strong></span>
+                                    <input type="tel" placeholder="Enter number" required id="phoneno">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    <small>Error Message</small>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Password</span>
-                                    <input type="text" placeholder="Enter Password" required>
+                                    <span class="details"><strong>Password</strong></span>
+                                    <input type="password" placeholder="Enter Password" required id="pass1">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    <small>Error Message</small>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Confirm Password</span>
-                                    <input type="text" placeholder="Confirm Password" required>
+                                    <span class="details"><strong>Confirm Password</strong></span>
+                                    <input type="password" placeholder="Confirm Password" required id="pass2">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    <small>Error Message</small>
+                                </div>
+
+                                <!--========== DROPDOWN SELECTION ==========-->
+                                <div class="input-box">
+                                    <span class="details"><strong>Department</strong></span>
+                                    <select name="dept" id= "dpt">
+                                        <option value="CSE">CSE</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="MEC">MEC</option>
+                                        <option value="EEE">EEE</option>
+                                        <option value="CHE">CHE</option>
+                                        <option value="AERO">AERO</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details"><strong>Year</strong></span>
+                                    <select name="year" id= "yr">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details"><strong>Section</strong></span>
+                                    <select name="section" id= "sec">
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                    </select>
                                 </div>
                             </div>
+                            <!--========== END ==========-->
 
+                            <!--========== GENDER RADIO BUTTONS ==========-->
                             <div class="gender-details">
-                                <input type="radio" name="gender" id="dot-1">
-                                <input type="radio" name="gender" id="dot-2">
-                                <input type="radio" name="gender" id="dot-3">
+                                <input type="radio" name="gender" id="dot-1" value="Male">
+                                <input type="radio" name="gender" id="dot-2" value="Female">
+                                <input type="radio" name="gender" id="dot-3" value="Other">
                                 <span class="gender-title">Gender</span>
                                 <div class="category">
                                     <label for="dot-1">
@@ -163,10 +204,16 @@
                                         <span class="gender">Other</span>
                                     </label>
                                 </div>
+                                <small id="messages">Error Message</small>
+                            <!--========== END ==========-->    
+
+                            <!--========== SUBMIT BUTTON ==========-->
                             </div>
-                            <div class="button">
-                                <input type="submit" value="Register">
+                            <div class="button" id="btn">
+                                <input type="submit" value="Register" onclick="validation()">
+                                <script src="js/Validation.js"></script>
                             </div>
+                            <!--========== END ==========--> 
                         </form>
                     </div>
             </div>

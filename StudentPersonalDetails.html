@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="css/StudentPersonalDetails.css">
+        
+        <title>Student Profile Details</title>
+    </head>
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <img src="/img/Person.jpg" alt="" class="header__img">
+
+                <a href="#" class="header__logo"></a>
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon' ></i>
+                        <span class="nav__logo-name">Dashboard</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Enroll</h3>
+    
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-user nav__icon' ></i>
+                                    <span class="nav__name">Sign Up</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="StudReg.html" class="nav__dropdown-item">Student</a>
+                                        <a href="FacReg.html" class="nav__dropdown-item">Faculty</a>
+                                        <a href="WardenReg.html" class="nav__dropdown-item">Warden</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Personal Details</h3>
+    
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bxs-alarm-add nav__icon' ></i>
+                                    <span class="nav__name">Update</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="StudentPersonalDetails.html" class="nav__dropdown-item">Student</a>
+                                        <a href="#" class="nav__dropdown-item">Faculty</a>
+                                        <a href="#" class="nav__dropdown-item">Warden</a>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-street-view nav__icon' ></i>
+                                <span class="nav__name">View</span>
+                            </a>
+                    
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== REGISTRATION ==========-->
+        <main>
+            
+            <div class="container">
+                <div class="title">Student Profile Details</div>
+                    <div class="content">
+                        <form action="#" name="test">
+
+                            <div class="progressbar">
+                                <div class="progress" id="progress"></div>
+                                <div class="progress-step progress-step-active" data-title="Intro"></div>
+                                <div class="progress-step" data-title="Education"></div>
+                                <div class="progress-step" data-title="Parents"></div>
+                                <div class="progress-step" data-title="Docs"></div>
+                            </div>
+                            <!--========== TEXTBOX INPUT ==========-->
+                            <div class="form-step form-step-active">    
+                                <div class="user-details" id="form">
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Full Name</strong></span>
+                                        <input type="text" placeholder="Enter Full Name" required id="fullname">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Student ID</strong></span>
+                                        <input type="text" placeholder="Enter Username" required id="username">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Admitted Campus</strong></span>
+                                        <input type="" placeholder="Enter Campus Name" required id="campusname">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Academic Program</strong></span>
+                                        <select name="program" id= "pg">
+                                            <option value="B.Tech">B.Tech</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Admitted Branch</strong></span>
+                                        <select name="dept" id= "dpt">
+                                            <option value="CSE">CSE</option>
+                                            <option value="ECE">ECE</option>
+                                            <option value="MEC">MEC</option>
+                                            <option value="EEE">EEE</option>
+                                            <option value="CHE">CHE</option>
+                                            <option value="AERO">AERO</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Section</strong></span>
+                                        <select name="section" id= "sec">
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="E">E</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Class Advisor</strong></span>
+                                        <input type="text" placeholder="Enter Advisor Name" required id="advisorname">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Joining Year</strong></span>
+                                        <input type="text" placeholder="Enter Joining Year" required id="joiningyear">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Birth Date</strong></span>
+                                        <input type="date" placeholder="Date Of Birth" required id="birthday">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Blood Group</strong></span>
+                                        <input type="text" placeholder="Blood Group" required id="bloodgroup">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Qualifying Exam State</strong></span>
+                                        <input type="password" placeholder="Enter Exam State" required id="examstate">
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Nationality</strong></span>
+                                        <select name="nationality" id= "nlty">
+                                            <option value="Indian">Indian</option>
+                                            <option value="Indian">NRI</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Mother Tongue</strong></span>
+                                        <input type="text" placeholder="Enter Mother Tongue" required id="mothertongue">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Permanent Address</strong></span>
+                                        <textarea rows="10" cols="10" required id="permaddress"></textarea>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                </div>
+                                <div class="">
+                                    <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                                </div>
+                            </div>
+                            <div class="form-step">    
+                                <div class="user-details" id="form">
+                                    <!--=======10TH EDUCATION=========--->
+                                    <div class="input-box">
+                                        <span class="details"><strong>10th Board/University</strong></span>
+                                        <input type="text" placeholder="Enter 10th Board" required id="10thboard">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>10th Year Of Passing</strong></span>
+                                        <input type="text" placeholder="Enter Year Of Passing" required id="10thpassing">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Number Of Attempts</strong></span>
+                                        <input type="text" placeholder="Enter Number Of Attempts" required id="10thattempts">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Medium Of Instruction</strong></span>
+                                        <input type="text" placeholder="Enter M.O.I" required id="10thmedium">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>10th Marks</strong></span>
+                                        <input type="text" placeholder="Enter Marks" required id="10thmarks">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Total</strong></span>
+                                        <input type="text" placeholder="Enter Total" required id="10thtotal">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>10th School/Institution</strong></span>
+                                        <input type="text" placeholder="Enter School/Institution" required id="10thschool">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>10th School Address</strong></span>
+                                        <textarea rows="10" cols="10" required id="address"></textarea>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>12th Board/University</strong></span>
+                                        <input type="text" placeholder="Enter 12th Board" required id="12thboard">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>12th Year Of Passing</strong></span>
+                                        <input type="text" placeholder="Enter Year Of Passing" required id="12thpassing">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Number Of Attempts</strong></span>
+                                        <input type="text" placeholder="Enter Number Of Attempts" required id="12thattempts">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Medium Of Instruction</strong></span>
+                                        <input type="text" placeholder="Enter M.O.I" required id="12thmedium">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>12th Marks</strong></span>
+                                        <input type="text" placeholder="Enter Marks" required id="12thmarks">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Total</strong></span>
+                                        <input type="text" placeholder="Enter Total" required id="12thtotal">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>12th School/Institution</strong></span>
+                                        <input type="text" placeholder="Enter School/Institution" required id="12thschool">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>12th School Address</strong></span>
+                                        <textarea rows="10" cols="10" required id="schooladdress"></textarea>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <!--=======END---------------------->
+                                    <!--=======12TH EDUCATION========--->
+                                </div>
+                                <div class="btns-group">
+                                    <a href="#" class="btn btn-prev">Previous</a>
+                                    <a href="#" class="btn btn-next">Next</a>
+                                </div>
+                            </div>
+                            <div class="form-step">    
+                                <div class="user-details" id="form">
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Father's Name</strong></span>
+                                        <input type="text" placeholder="Enter Father's Name" required id="fathername">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>D.O.B</strong></span>
+                                        <input type="date" placeholder="Enter Father's D.O.B" required id="fatherdob">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Occupation</strong></span>
+                                        <input type="text" placeholder="Enter Father's Occupation" required id="fatheroccup">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Income</strong></span>
+                                        <input type="text" placeholder="Enter Father's Income" required id="fatherincome">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Mobile</strong></span>
+                                        <input type="text" placeholder="Enter Father's Mobile" required id="fathermobile">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Email</strong></span>
+                                        <input type="email" placeholder="Enter Father's Email" required id="fatheremail">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Address</strong></span>
+                                        <textarea rows="10" cols="10" required id="fatheraddress"></textarea>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details"><strong>Mother's Name</strong></span>
+                                        <input type="text" placeholder="Enter Mother's Name" required id="mothername">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>D.O.B</strong></span>
+                                        <input type="date" placeholder="Enter Mother's D.O.B" required id="motherdob">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Occupation</strong></span>
+                                        <input type="text" placeholder="Enter Mother's Occupation" required id="motheroccup">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Income</strong></span>
+                                        <input type="text" placeholder="Enter Mother's Income" required id="motherincome">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Mobile</strong></span>
+                                        <input type="text" placeholder="Enter Mother's Mobile" required id="mothermobile">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Email</strong></span>
+                                        <input type="email" placeholder="Enter Mother's Email" required id="motheremail">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details"><strong>Address</strong></span>
+                                        <textarea rows="10" cols="10" required id="motheraddress"></textarea>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>Error Message</small>
+                                    </div>
+
+
+                                </div>
+                                <div class="btns-group">
+                                    <a href="#" class="btn btn-prev">Previous</a>
+                                    <a href="#" class="btn btn-next">Next</a>
+                                </div>
+                            </div>
+                            <div class="form-step">    
+                                <div class="user-details" id="form">
+
+                                    <div class="document-box">
+                                        <input type="file"  id="imageofperson" hidden="hidden">
+                                        <button type="button" class="btn" id="custom-btn-photo">PHOTO</button>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>No file chosen yet</small>
+                                    </div>
+                                    <div class="document-box">
+                                        <input type="file"  id="birthcertificate" hidden="hidden">
+                                        <button type="button" class="btn" id="custom-btn-birth">BIRTH CERTIFICATE</button>
+                                        <script>
+                                                const birthcertificate = document.getElementById('birthcertificate');
+                                                const custombutton1 = document.getElementById('custom-btn-birth');
+                                                
+                                                custombutton1.addEventListener("click", function() {
+                                                        birthcertificate.click();
+                                                });
+
+                                                birthcertificate.addEventListener("change", function() {
+                                            
+                                                    if(birthcertificate.value) {
+                                                        setSuccess(birthcertificate, 'File Uploaded:' + birthcertificate.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]);
+                                                    }else{
+                                                        setError(birthcertificate, '*No file has been uploaded');
+                                                    }
+                                                    
+                                                });
+                                                function setSuccess(input,message) {
+                                                const classControl = input.parentElement;
+                                                const small = classControl.querySelector('small');
+                                                classControl.className = 'document-box success';
+                                                small.innerText = message;
+                                                }
+
+                                                function setError(input,message) {
+                                                const classControl = input.parentElement;
+                                                const small = classControl.querySelector('small');
+                                                classControl.className = 'document-box failure';
+                                                small.innerText = message;
+                                                }
+                                        </script>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        <small>No file chosen yet</small>
+                                    </div>
+                                    <div class="document-box">
+                                        <input type="file"  id="aadharcard" hidden="true">
+                                        <button type="button" class="btn" id="custom-btn-aad">AADHAR CARD</button>
+                                        <small>No file chosen yet</small>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="document-box">
+                                        <input type="file"  id="transfercertificate" hidden="true">
+                                        <button type="button" class="btn" id="custom-btn-trans">TRANSFER CERTIFICATE</button>
+                                        <small>No file chosen yet</small>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    </div>
+                                    
+                                    <div class="document-box">
+                                        <input type="file" id="10thmarksheet" hidden="true">
+                                        <button type="button" class="btn" id="custom-btn-10th">10TH MARKSHEET</button>
+                                        <small>No file chosen yet</small>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="document-box">
+                                        <input type="file" id="12thmarksheet" hidden="true">
+                                        <button type="button" class="btn" id="custom-btn-12th">12TH MARKSHEET</button>
+                                        <small>No file chosen yet</small>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    </div>
+                                
+                                </div>
+                                <div class="btns-group" id="submit-btn">
+                                    <a href="#" class="btn btn-prev">Previous</a>
+                                    <input type="submit" value="Submit" class="btn" onclick="validationmultistepform()">
+                                    <script src="js/Validation_StudentForm.js" defer></script>
+                                </div>
+                            </div>
+                        </form>    
+                    </div>    
+            </div>
+        </main>
+        <!--========== DASHBOARD JS ==========-->
+        <script src="js/Dashboard.js"></script>
+        <script src="js/StudentFormNavigation.js" defer></script>
+    </body>
+</html>

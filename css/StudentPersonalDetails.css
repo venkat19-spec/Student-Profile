@@ -264,14 +264,14 @@ img {
 
 /* ==========REGISTRATION FORM========*/
 main{
-  height: 90vh;
+  height: 160vh;
   display: inline-block;
   justify-content: center;
   align-items: center;
 }
 
 .container{
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   background-color: #fff;
   padding: 25px 30px;
@@ -296,26 +296,125 @@ main{
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-.content form .user-details{
+/*=========PROGRESS BAR=========*/
+.width-50 {
+    width: 48%;
+  }
+  
+.ml-auto {
+    margin-left: auto;
+  }
+
+form .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+    z-index: 1;
+}
+  
+form .progressbar::before,.progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+}
+  
+form .progress {
+    background-color: rgb(11, 78, 179);
+    width: 0%;
+    transition: 0.3s;
+}
+  
+form .progressbar .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+form .progressbar .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+  
+form .progressbar .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 1.5rem);
+    font-size: 0.85rem;
+    color: #666;
+}
+  
+form .progressbar .progress-step-active {
+    background-color: rgb(11, 78, 179);
+    color: #f3f3f3;
+}
+
+  form .form-step {
+      display: none;
+      transform-origin: top;
+      animation: animate 0.5s;
+  }
+  form .form-step.form-step-active {
+    display:block;
+  }
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+
+.content form .form-step .user-details{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
 
-form .user-details .input-box{
+form .form-step .user-details .input-box{
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width: calc(100% / 2 - 20px);
 }
-
-form .input-box span.details{
+form .form-step .user-details .document-box{
+  position: relative;
+  margin-bottom: 20px;
+  width: calc(100% / 2 - 20px);
+}
+form .form-step .input-box span.details{
   display: block;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 3px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.user-details .document-box button{
   height: 45px;
   width: 100%;
   outline: none;
@@ -341,6 +440,21 @@ form .input-box span.details{
   display: block;
 }
 
+.user-details .input-box textarea{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 3px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+
 .user-details .input-box.success input{
   border-color: #2ecc71;
 }
@@ -350,8 +464,15 @@ form .input-box span.details{
 
 .user-details .input-box i{
   position: absolute;
-  right: 15px;
-  top: 45px;
+  right: 30px;
+  top: 40px;
+  visibility: hidden;
+}
+
+.user-details .document-box i{
+  position: absolute;
+  right: 0px;
+  top: 48px;
   visibility: hidden;
 }
 
@@ -359,7 +480,15 @@ form .input-box span.details{
   visibility: visible;
   color: #2ecc71;
 }
+.user-details .document-box.success i.fa-check-circle{
+  visibility: visible;
+  color: #2ecc71;
+}
 .user-details .input-box.failure i.fa-exclamation-circle{
+  visibility: visible;
+  color: #e74c3c;
+}
+.user-details .document-box.failure i.fa-exclamation-circle{
   visibility: visible;
   color: #e74c3c;
 }
@@ -372,10 +501,29 @@ form .input-box span.details{
   left: 0;
 }
 
+.user-details .document-box small{
+  position: relative;
+  visibility: visible;
+  font-weight: bolder;
+  bottom: 0;
+  left: 0;
+}
+
 .user-details .input-box.failure small{
   visibility: visible;
   color: #e74c3c;
 }
+
+.user-details .document-box.success small{
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.user-details .document-box.failure small{
+  visibility: visible;
+  color: #e74c3c;
+}
+
 .user-details .input-box input:focus,.user-details .input-box input:valid{
   border-color: #9b59b6;
 }
@@ -420,6 +568,7 @@ form .gender-details small{
 form .gender-details.success small{
   visibility: visible;
   color: #2ecc71;
+  
 }
 form .gender-details.failure small{
   visibility: visible;
@@ -434,35 +583,36 @@ form .gender-details.failure small{
  }
 
 form input[type="radio"]{
-   display:none;
+   display: none;
 }
 
-form .button{
-   height: 45px;
-   margin: 25px 0 10px 0;
-}
-
-form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
-}
- 
-form .button input:hover{
-  /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-}
+form .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.9rem;
+  }
+  
+form .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: rgb(11, 78, 179);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+form .btn:hover {
+    box-shadow: 0 0 0 2px rgb(255, 0, 0);
+  }
 
 /* ========== MEDIA QUERIES ==========*/
 /* For small devices reduce search*/
+
+
+
 
   @media screen and (min-width: 768px) {
     body {
@@ -491,7 +641,7 @@ form .button input:hover{
     .nav {
       left: 0;
       padding: 1.2rem 1.5rem 0;
-      width: 68px; /* Reduced navbar */
+      width: 68px; 
     }
     .nav__items {
       row-gap: 1.7rem;
@@ -500,7 +650,7 @@ form .button input:hover{
       font-size: 1.3rem;
     }  
   
-    /* Element opacity */
+    
     .nav__logo-name, 
     .nav__name, 
     .nav__subtitle, 
@@ -508,11 +658,12 @@ form .button input:hover{
       opacity: 0;
       transition: .3s;
     }
-    /* Navbar expanded */
+    
+
     .nav:hover {
       width: var(--nav-width);
     }
-    /* Visible elements */
+    
     .nav:hover .nav__logo-name {
       opacity: 1;
     }
@@ -536,19 +687,25 @@ form .button input:hover{
       padding-left: 0px;
     }
     .container{
-        
         max-width: 100%;
         margin-top: 30px;
         position: relative;
+      }
+     form .progressbar .progress-step data-title{
+      width:25%;
+     }
+     form .form-step .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
         }
-     form .user-details .input-box{
+      form .form-step .user-details .document-box{
         margin-bottom: 15px;
         width: 100%;
         }
      form .category{
         width: 100%;
         }
-     .content form .user-details{
+     form .form-step .user-details{
         max-height: 250px;
         overflow-y: scroll;
         }
@@ -556,4 +713,3 @@ form .button input:hover{
         width: 5px;
         }
   }
-  
